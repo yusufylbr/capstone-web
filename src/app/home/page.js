@@ -88,7 +88,7 @@ export default function SearchAndCompare() {
   const parseStorageValue = (value) => {
     if (!value) return 0;
     value = value.toUpperCase();
-    if (value.includes("TB")) return parseFloat(value) * 1000;
+    if (value.includes("TB")) return parseFloat(value) * 1024;
     if (value.includes("GB")) return parseFloat(value);
     if (value.includes("MB")) return parseFloat(value) / 1024;
     return parseFloat(value.replace(/[^0-9.]/g, "")) || 0;
@@ -109,7 +109,7 @@ export default function SearchAndCompare() {
 
   const calculateClosestPhones = (selected) => {
     const featureKeys = [
-      "Çıkış Yılı",
+      "Çıkış Yılı =",
       "Ekran Boyutu",
       "Ekran Çözünürlüğü",
       "Bellek (RAM)",
