@@ -226,9 +226,9 @@ const checkNetwork = (has4G, has5G, filterNetwork) => {
 
   switch (filterNetwork) {
     case "4G Only":
-      return has4G === "Var" && has5G !== "Var";
+      return has4G === "Yes" && has5G !== "Yes";
     case "4G & 5G":
-      return has4G === "Var" && has5G === "Var";
+      return has4G === "Yes" && has5G === "Yes";
     default:
       return true;
   }
